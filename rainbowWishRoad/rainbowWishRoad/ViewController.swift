@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var colorsArray = ["red", "orange", "yellow", "green", "blue", "purple"]
+    var colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor.blue, UIColor.purple]
     
     @IBOutlet var colorfulTableView: UITableView!
     
@@ -39,24 +39,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        let backgroundCommand = "cell.backgroundColor = UIColor.\(colorsArray[indexPath.row])"
         //backgroundCommand
 //
-//        cell.backgroundColor = UIColor."(\(colorsArray[indexPath.row])"
+        cell.backgroundColor = colorsArray[indexPath.row]
         
-        switch indexPath.row {
-        case 0:
-            cell.backgroundColor = UIColor.red
-        case 1:
-            cell.backgroundColor = UIColor.orange
-        case 2:
-            cell.backgroundColor = UIColor.yellow
-        case 3:
-            cell.backgroundColor = UIColor.green
-        case 4:
-            cell.backgroundColor = UIColor.blue
-        case 5:
-            cell.backgroundColor = UIColor.purple
-        default:
-            cell.backgroundColor = UIColor.clear
-        }
+//        switch indexPath.row {
+//        case 0:
+//            cell.backgroundColor = UIColor.red
+//        case 1:
+//            cell.backgroundColor = UIColor.orange
+//        case 2:
+//            cell.backgroundColor = UIColor.yellow
+//        case 3:
+//            cell.backgroundColor = UIColor.green
+//        case 4:
+//            cell.backgroundColor = UIColor.blue
+//        case 5:
+//            cell.backgroundColor = UIColor.purple
+//        default:
+//            cell.backgroundColor = UIColor.clear
+//        }
         
         colorfulTableView.rowHeight = 120
         
